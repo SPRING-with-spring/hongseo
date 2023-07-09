@@ -1,5 +1,7 @@
-package com.study.springcore.member;
+package com.study.springcore.repository;
 
+import com.study.springcore.domain.member.Member;
+import com.study.springcore.repository.MemberRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
 

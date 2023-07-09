@@ -1,4 +1,4 @@
-package com.study.springcore.member;
+package com.study.springcore.domain.member;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

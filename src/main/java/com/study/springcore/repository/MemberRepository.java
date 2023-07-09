@@ -1,4 +1,6 @@
-package com.study.springcore.member;
+package com.study.springcore.repository;
+
+import com.study.springcore.domain.member.Member;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,7 @@
 package com.study.springcore.rank;
 
-import com.study.springcore.member.Member;
+import com.study.springcore.domain.member.Member;
+import com.study.springcore.service.rank.GradePolicy;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

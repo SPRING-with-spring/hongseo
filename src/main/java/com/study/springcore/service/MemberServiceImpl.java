@@ -1,6 +1,8 @@
-package com.study.springcore.member;
+package com.study.springcore.service;
 
-import com.study.springcore.rank.RankingPolicy;
+import com.study.springcore.domain.member.Member;
+import com.study.springcore.service.rank.RankingPolicy;
+import com.study.springcore.repository.MemberRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package com.study.springcore.rank;
+package com.study.springcore.service.rank;
 
-import com.study.springcore.member.Member;
+import com.study.springcore.domain.member.Member;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
