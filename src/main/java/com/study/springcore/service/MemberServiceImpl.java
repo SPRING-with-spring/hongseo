@@ -1,6 +1,6 @@
 package com.study.springcore.service;
 
-import com.study.springcore.domain.member.Member;
+import com.study.springcore.domain.Member;
 import com.study.springcore.service.rank.RankingPolicy;
 import com.study.springcore.repository.MemberRepository;
 import lombok.AllArgsConstructor;

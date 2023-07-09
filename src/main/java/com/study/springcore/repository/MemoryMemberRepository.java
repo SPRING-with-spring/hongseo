@@ -1,7 +1,6 @@
 package com.study.springcore.repository;
 
-import com.study.springcore.domain.member.Member;
-import com.study.springcore.repository.MemberRepository;
+import com.study.springcore.domain.Member;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
