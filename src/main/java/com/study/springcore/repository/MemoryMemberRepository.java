@@ -32,4 +32,14 @@ public class MemoryMemberRepository implements MemberRepository {
         }
         return all;
     }
+
+    @Override
+    public Member findByUsername(String username) {
+        for (Long i : store.keySet()) {
+            if(store.get(i).getUsername().equals(username)) {
+                return store.get(i);
+            }
+        }
+        return null;
+    }
 }

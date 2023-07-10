@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Schema(name = "회원가입 멤버 요청")
 @Data
-public class MemberReq {
+public class JoinReq {
 
     @Schema(name = "이름(실명)", example = "홍길동")
     private String name;
