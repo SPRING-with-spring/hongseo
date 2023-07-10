@@ -1,4 +1,4 @@
-package com.study.springcore;
+package com.study.springcore.config;
 
 
 import io.swagger.v3.oas.models.Components;

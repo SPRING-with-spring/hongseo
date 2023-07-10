@@ -17,10 +17,9 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public Long join(MemberReq request) {
+    public void join(MemberReq request) {
         Member member = Member.makeMember(request);
-       return memberRepository.save(member);
-
+        memberRepository.save(member);
     }
 
     @Override

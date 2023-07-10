@@ -1,5 +1,7 @@
 package com.study.springcore.controller;
 
+import com.study.springcore.ResponseEntity;
+import com.study.springcore.StatusEnum;
 import com.study.springcore.dto.MemberReq;
 import com.study.springcore.service.MemberService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -20,8 +22,8 @@ public class MemberController {
     @Operation(summary = "회원가입", description = "멤버를 생성합니다.")
 //    @Parameter(name = "str", description = "2번 반복할 문자열")
     @PostMapping("/join")
-    public Long join(@ModelAttribute MemberReq member) {
-        Long memberId = memberService.join(member);
-        return memberId;
+    public ResponseEntity<Long> join(@ModelAttribute MemberReq member) {
+        memberService.join(member);
+        return ResponseEntity.res(StatusEnum.OK);
     }
 }

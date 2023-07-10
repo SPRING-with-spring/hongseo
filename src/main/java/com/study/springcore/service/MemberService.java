@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import java.util.ArrayList;
 
 public interface MemberService {
-    Long join(MemberReq request);
+    void join(MemberReq request);
 
 //    void login(Member member, BindingResult bindingResult, HttpServletRequest request);
 //

@@ -1,11 +1,6 @@
 package com.study.springcore.member;
 
-import com.study.springcore.AutoConfiguration;
-import com.study.springcore.domain.Member;
-import com.study.springcore.service.MemberService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 class MemberServiceImplTest {
 

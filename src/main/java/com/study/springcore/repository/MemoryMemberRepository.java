@@ -14,10 +14,9 @@ public class MemoryMemberRepository implements MemberRepository {
     private Long id = 0L;
 
     @Override
-    public Long save(Member member) {
+    public void save(Member member) {
         member.setId(id);
         store.put(++id, member);
-        return id;
     }
 
     @Override
