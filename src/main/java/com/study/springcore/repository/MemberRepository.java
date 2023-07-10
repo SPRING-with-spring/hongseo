@@ -5,7 +5,7 @@ import com.study.springcore.domain.Member;
 import java.util.ArrayList;
 
 public interface MemberRepository {
-    void save(Member member);
+    Long save(Member member);
 
     Member findById(Long memberId);
 

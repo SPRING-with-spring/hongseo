@@ -11,10 +11,13 @@ import java.util.Map;
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
+    private Long id = 0L;
 
     @Override
-    public void save(Member member) {
-        store.put(member.getId(), member);
+    public Long save(Member member) {
+        member.setId(id);
+        store.put(++id, member);
+        return id;
     }
 
     @Override

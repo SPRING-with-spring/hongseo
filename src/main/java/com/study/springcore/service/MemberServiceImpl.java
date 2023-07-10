@@ -1,6 +1,7 @@
 package com.study.springcore.service;
 
 import com.study.springcore.domain.Member;
+import com.study.springcore.dto.MemberReq;
 import com.study.springcore.service.rank.RankingPolicy;
 import com.study.springcore.repository.MemberRepository;
 import lombok.AllArgsConstructor;
@@ -16,8 +17,10 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public void join(Member member) {
-        memberRepository.save(member);
+    public Long join(MemberReq request) {
+        Member member = Member.makeMember(request);
+       return memberRepository.save(member);
+
     }
 
     @Override
