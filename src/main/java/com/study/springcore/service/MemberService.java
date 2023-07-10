@@ -3,6 +3,7 @@ package com.study.springcore.service;
 import com.study.springcore.domain.Member;
 import com.study.springcore.dto.JoinReq;
 import com.study.springcore.dto.MemberRes;
+import com.study.springcore.dto.RankReq;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.validation.BindingResult;
 
@@ -19,5 +20,7 @@ public interface MemberService {
 
     ArrayList<Member> findAll();
 
-    int calculateRank(Member member);
+    Integer calculateRank(Long memberId);
+
+    void registerRank(Long memberId, RankReq rank);
 }

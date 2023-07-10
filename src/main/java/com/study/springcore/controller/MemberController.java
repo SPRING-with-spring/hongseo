@@ -66,6 +66,4 @@ public class MemberController {
         }
         return ResponseEntity.res(StatusEnum.OK, "empty");
     }
-
-
 }

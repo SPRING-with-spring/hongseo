@@ -5,5 +5,5 @@ import com.study.springcore.domain.Member;
 import java.util.ArrayList;
 
 public interface RankingPolicy {
-    int score(Member member, ArrayList<Member> members);
+    Integer score(Member member, ArrayList<Member> members);
 }

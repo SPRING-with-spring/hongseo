@@ -2,6 +2,7 @@ package com.study.springcore.domain;
 
 import com.study.springcore.dto.JoinReq;
 import com.study.springcore.dto.MemberRes;
+import com.study.springcore.dto.RankReq;
 import lombok.*;
 
 @Getter
@@ -27,5 +28,11 @@ public class Member {
 
     public static MemberRes toDto(Member member) {
         return new MemberRes(member.getId(), member.getName(), member.getUsername());
+    }
+
+    public void registerRank(RankReq rank) {
+        this.score = rank.getScore();
+        this.grade = rank.getGrade();
+        this.percentile = rank.getPercentile();
     }
 }

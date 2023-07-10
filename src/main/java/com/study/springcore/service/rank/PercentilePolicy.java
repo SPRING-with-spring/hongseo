@@ -10,7 +10,7 @@ import java.util.Objects;
 public class PercentilePolicy implements RankingPolicy{
 
     @Override
-    public int score(Member member, ArrayList<Member> members) {
+    public Integer score(Member member, ArrayList<Member> members) {
         List<Member> sortedMembers= members.stream()
                 .sorted(Comparator.comparing(Member::getPercentile)).toList();
         int i = 0;

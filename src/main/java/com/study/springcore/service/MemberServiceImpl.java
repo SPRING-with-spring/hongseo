@@ -3,6 +3,7 @@ package com.study.springcore.service;
 import com.study.springcore.domain.Member;
 import com.study.springcore.dto.JoinReq;
 import com.study.springcore.dto.MemberRes;
+import com.study.springcore.dto.RankReq;
 import com.study.springcore.service.rank.RankingPolicy;
 import com.study.springcore.repository.MemberRepository;
 import lombok.AllArgsConstructor;
@@ -47,7 +48,13 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public int calculateRank(Member member) {
-        return rankingPolicy.score(member, findAll());
+    public Integer calculateRank(Long memberId) {
+        return rankingPolicy.score(findMember(memberId), findAll());
+    }
+
+    @Override
+    public void registerRank(Long memberId, RankReq rank) {
+        Member member = findMember(memberId);
+        member.registerRank(rank);
     }
 }
