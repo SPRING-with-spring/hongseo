@@ -1,5 +1,6 @@
-package com.study.springcore.member;
+package com.study.springcore.repository;
 
+import com.study.springcore.domain.Member;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -7,13 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
+    private Long id = 0L;
 
     @Override
     public void save(Member member) {
-        store.put(member.getId(), member);
+        member.setId(id);
+        store.put(++id, member);
     }
 
     @Override
@@ -28,5 +31,15 @@ public class MemoryMemberRepository implements MemberRepository{
             all.add(store.get(i));
         }
         return all;
+    }
+
+    @Override
+    public Member findByUsername(String username) {
+        for (Long i : store.keySet()) {
+            if(store.get(i).getUsername().equals(username)) {
+                return store.get(i);
+            }
+        }
+        return null;
     }
 }
